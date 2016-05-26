@@ -30,4 +30,4 @@ The compiled result is stored in the opcache files.
 
 Thanks to the directive `validate_timestamps=0` the original files are not
 used anymore. You can empty thoses file, the application still works because
-then engine will always use the opcached files.
+the engine will always use the opcached files.
