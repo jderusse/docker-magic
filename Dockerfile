@@ -18,6 +18,6 @@ ENV SYMFONY_ENV=prod
 RUN symfony demo /srv \
  && echo 'doctrine: {dbal: {path: "%kernel.root_dir%/data/blog.sqlite"}}' >> /srv/app/config/config_prod.yml \
  && /srv/app/console cache:warmup \
- && find -L /srv/app -name '*.php' -exec php -l {} \; -exec sh -c ": > {}" \;
+ && find -L /srv -name '*.php' -exec php -l {} \; -exec sh -c ": > {}" \;
 
 CMD php /srv/app/console
